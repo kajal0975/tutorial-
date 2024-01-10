@@ -69,5 +69,5 @@ public class StudentH2Service implements StudentRepository {
     public void deleteStudent(int studentId) {
         db.update("delete from student where studentId = ?", studentId);
 
-   }
+    }
 }

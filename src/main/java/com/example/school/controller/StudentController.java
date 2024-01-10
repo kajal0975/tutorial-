@@ -25,17 +25,17 @@ public class StudentController {
     }
 
     @PostMapping("/students")
-    public Student addsingleStudent(@RequestBody Student student) {
+    public Student addsinglStudent(@RequestBody Student student) {
         return studentH2Service.addSinglStudent(student);
     }
 
     @PostMapping("/students/bulk")
-    public String addMultipleStudents(@RequestBody ArrayList<Student> studentsList) {
-        return studentH2Service.addMultipleStudents(studentsList);
+    public String addMultipleStudents(@RequestBody ArrayList<Student> student) {
+        return studentH2Service.addMultipleStudents(student);
     }
 
     @PutMapping("/students/{studentId}")
-    public Student updateStudent(@PathVariable("studentId") int studentId, @RequestBody Student student) {
+    public Student updatStudent(@PathVariable("studentId") int studentId, @RequestBody Student student) {
         return studentH2Service.updateStudent(studentId, student);
     }
 
@@ -43,4 +43,5 @@ public class StudentController {
     public void deleteStudent(@PathVariable int studentId) {
         studentH2Service.deleteStudent(studentId);
     }
+
 }
